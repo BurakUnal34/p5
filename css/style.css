@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  background-color: rgb(136, 126, 108);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 5rem;
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.checkBtn {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.checkBtn {
+  cursor: pointer;
+  font-size: 30px;
+  float: right;
+  color: #000000;
+  line-height: 80px;
+}
+
+.right ul {
+  display: flex;
+  list-style: none;
+}
+
+.right ul li a {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.right ul li a:hover {
+  background-color: #fff;
+  border-radius: 7px;
+  color: rgb(22, 7, 36);
+}
+
+@media screen and (max-width: 805px) {
+  .left h1 {
+    margin-left: 120px;
+  }
+  .list {
+    z-index: 101;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(184, 165, 142);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 4rem;
+    left: 100%;
+    transition: all 1s;
+    
+  }
+
+  #check {
+    display: none;
+  
+  }
+
+  .checkBtn {
+    display: block;
+    
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+}
+
+/* Slider ---------------------*/
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.slider-item .mySlides {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  transform: background 500ms;
+}
+.slide-left {
+  left: 0;
+}
+
+.slide-right {
+  right: 0;
+}
+
+.slider .slider-text {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+  color: #fff;
+}
+.slider-text p {
+  width: 100%;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+.slider-text h2 {
+  font-size: 120px;
+}
+.slider-text a {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+.slider-text a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* grid card ---------------------*/
+
+.section-02 {
+  margin-bottom: 150px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid .grid-card {
+  text-align: center;
+  font-size: 30px;
+}
+.grid-container {
+  width: 100%;
+  margin-top: 60px;
+}
+.grid-container h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.grid-container p {
+  font-size: 18px;
+  max-width: 300px;
+  margin: 0 100px;
+}
+.grid-card span {
+  background-color: #000000;
+  color: white;
+  border-radius: 50%;
+  padding: 25px 25px;
+}
+
+/* section-03 ---------------------*/
+
+.sec-item img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  height: 600px;
+}
+
+.sec-item-01 {
+  position: absolute;
+  width: 50%;
+  padding: 150px 100px;
+  color: white;
+  z-index: 100;
+}
+.sec-item-01 h3 {
+  font-size: 36px;
+}
+.sec-item-01 .sec-p {
+  font-weight: 900;
+  opacity: 1;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.sec-item-01 p {
+  margin-top: 40px;
+  opacity: 0.7;
+}
+
+.sec-item-01 a {
+  background-color: #ffffff; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+/* section-04 ---------------------*/
+.section-04 {
+  margin-bottom: 150px;
+}
+.sec-card {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.sec-card img {
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  height: 400px;
+  opacity: 0.9;
+}
+.sec-card a img:hover {
+  border: 5px solid black;
+  filter: contrast(75%);
+}
+
+.sec-card-01 {
+  position: relative;
+  width: 100%;
+  color: white;
+  z-index: 100;
+}
+.sec-card-container {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50%;
+}
+.sec-card-container h4 {
+  font-size: 48px;
+}
+
+/* section-05 ---------------------*/
+
+.section-05 {
+  margin-bottom: 150px;
+}
+.sec-item-05 {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 150px;
+}
+
+.sec-item-05-a {
+  width: 410px;
+}
+.sec-item-05-a h4 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+.sec-item-05-a p {
+  font-size: 16px;
+}
+
+/* Footer ---------------------*/
+
+.footer{
+  background-color: #c0c0c0;
+}
+.footer-01 {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+.footer-01-a img {
+  width: 100%;
+  object-fit: cover;
+}
+.footer-01-b .footer-01-b-text {
+  width: 1200px;
+  padding: 120px 250px;
+}
+
+.footer-01-b-text h4 {
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  margin-top: 30px;
+}
+.footer-01-b-text p {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  margin-top: 30px;
+}
+.footer-container {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+}
+
+.html {
+  width: 90%;
+  background-color: #050505;
+}
+.css {
+  width: 80%;
+  background-color: #000000;
+}
+.js {
+  width: 20%;
+  background-color: #000000;
+}
